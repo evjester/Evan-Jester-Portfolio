@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evan Jester | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>Evan Jester</h1>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="about">
+      <div class="about-container">
+        <img src="images/headshot.jpg" alt="Evan Jester Headshot" class="headshot">
+        <div class="bio">
+          <h2>About Me</h2>
+          <p>Hi, I'm Evan Jester, currently studying Cybersecurity and Web Development at Indiana University. I have a
+            passion for creating secure, efficient, and engaging digital experiences. My interests include ethical
+            hacking, software development, and user experience design. This portfolio is designed to showcase the skills
+            and projects I've developed during my time at IU and beyond.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="resume">
+      <h2>Resume</h2>
+      <p>You can view or download my resume below:</p>
+      <embed src="documents/evan_resume.pdf" type="application/pdf" width="100%" height="1050px" />
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-button" onclick="this.classList.toggle('active')">GPA Calculator</div>
+      <div class="project-content">
+        <p>A Python program that calculates a student’s GPA based on letter grades entered by the user. It uses a
+          dictionary to convert each letter grade to a grade point and outputs the final GPA. This project was created
+          for the AP Computer Science Principles Create Task.</p>
+        <p><a href="documents/GPA-calc.py" download>Download GPA Calculator (.py)</a></p>
+      </div>
+
+    </section>
+
+    <section id="research" class="research">
+      <h2>Research</h2>
+
+      <div class="project-button" onclick="this.classList.toggle('active')">Netework Security--Firewalls Research Paper
+      </div>
+      <div class="project-content">
+        <p>This research paper explores the evolution of firewall technologies, from traditional packet filtering to
+          advanced solutions like Next-Generation Firewalls and cloud-native systems. It highlights how modern threats
+          like encrypted payloads and tunneling challenge existing defenses and discusses the role of AI, machine
+          learning, and behavioral analysis in enhancing firewall effectiveness.</p>
+        <embed src="documents/I430ReseachPaper.pdf" type="application/pdf" width="100%" height="600px" />
+      </div>
+
+      <div class="project-button" onclick="this.classList.toggle('active')">RFID Research Paper</div>
+      <div class="project-content">
+        <p>This paper summarizes several modern methods used by hackers to steal cars using vulnerabilities in RFID and
+          keyless entry systems. Techniques include cloning Tesla key fobs, relay attacks, and CAN injection hacks. It
+          highlights how evolving technology in vehicles has created new cybersecurity risks and emphasizes the need for
+          stronger protections.</p>
+        <embed src="documents/RFIDPaperSummary.pdf" type="application/pdf" width="100%" height="600px" />
+      </div>
+
+      <div class="project-button" onclick="this.classList.toggle('active')">Deepfake Research Paper</div>
+      <div class="project-content">
+        <p>COMING SOON</p>
+        <embed src="documents/Deepfakeresearchpaper.pdf" type="application/pdf" width="100%" height="600px" />
+      </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:jesterevan@gmail.com">jesterevan@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/evanjester15" target="_blank">linkedin.com/in/evanjester15</a>
+      </p>
+    </section>
+  </main>
+
+  <script>
+    // Toggle effect for project and research buttons
+    document.querySelectorAll('.project-button').forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.toggle('active');
+        let content = button.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+
+</html>
