@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Evan Jester — Portfolio
 
-## Getting Started
+Personal portfolio for Evan Jester — AI systems builder, founder of Hoosier AI Solutions,
+co-founder of Plaibook, and AI/ML grad student at CU Boulder.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router) + **TypeScript**
+- **Tailwind CSS v4** + **shadcn/ui** (base-ui)
+- **Remotion** (`@remotion/player`) for the animated hero "AI pipeline"
+- **next-themes** for dark/light mode (dark default)
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev          # site at http://localhost:3000
+npm run remotion     # Remotion Studio to edit the hero composition
+npm run build        # production build (deploy-ready for Vercel)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editing content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All copy lives in [`lib/data.ts`](lib/data.ts) — profile, ventures, clients, lab projects,
+skills, education, and timeline. Edit there without touching components.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Assets are in [`public/`](public): `resume.pdf`, `headshot.jpg`, and `logos/`.
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` — layout (fonts, SEO/OG), page composition, `globals.css` (design tokens)
+- `components/` — section components (nav, hero, ventures, clients, lab, about, contact, footer)
+- `remotion/` — Remotion compositions (`HeroPipeline`) and Studio entry
+- `lib/data.ts` — all site content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Remotion is free for individuals and small companies; review the
+  [Remotion license](https://remotion.dev/license) for company use.
+- Confirm the GitHub handle in `lib/data.ts` (currently `evjester`) before publishing.
